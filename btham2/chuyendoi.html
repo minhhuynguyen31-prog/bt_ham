@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+      function meterToFoot(meter) {
+    return meter * 3.28084;
+}
+
+// 2. Hàm đổi từ Feet sang Mét
+function footToMeter(foot) {
+    return foot * 0.3048;
+}
+
+// 3. Logic điều hướng (Sử dụng Menu lựa chọn)
+let choice = prompt("Chọn loại chuyển đổi:\n1. Met -> Feet\n2. Feet -> Met");
+let value = parseFloat(prompt("Nhập giá trị cần chuyển đổi:"));
+
+if (isNaN(value) || value < 0) {
+    alert("Vui lòng nhập một số dương hợp lệ!");
+} else {
+    if (choice === "1") {
+        let result = meterToFoot(value);
+        document.write(value + " meters = " + result.toFixed(4) + " feet");
+    } else if (choice === "2") {
+        let result = footToMeter(value);
+        document.write(value + " feet = " + result.toFixed(4) + " meters");
+    } else {
+        alert("Lựa chọn không hợp lệ!");
+    }
+}
+
+    </script>
+</body>
+
+</html>
